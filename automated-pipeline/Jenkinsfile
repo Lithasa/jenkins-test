@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Running the build script...'
+                bat 'build.bat'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests (simulated)...'
+                bat 'echo Tests passed!'
+            }
+        }
+    }
+}
